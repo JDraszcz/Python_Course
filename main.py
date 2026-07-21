@@ -95,3 +95,36 @@ fourth_kind_of_variable = True           # This is a boolean
 # print(f"You're {user_age} years old !")
 # user_double = user_age * 2 
 # print(f"The double of your age is {user_double}")
+
+
+#---------------------------------------------------------------#
+#                      Arithmetics                              #
+#---------------------------------------------------------------#
+
+# Here's the list of the operator, used in float and integer
+# Let's say we have an integer variable set to 1 called number
+# number = 1.25
+# number += 1   This one add 1 to number
+# number -= 1   This one substract 1 to number
+# number *= 2   This one doubles the variable
+# number **= 2  This one squares the number
+# number /= 2   This one divides to variable by 2
+# number %= 1   Modulo gives the remainder when one number is divided by another. 
+
+# Some other basics, keeping our variable number but using another one called result
+# result = round(number, 1)   Will round number and the output will be 1 and 1 decimal
+# result = abs(number)     Always give the positive one 
+# result = pow(number, 3)  This one will power number by 3 
+
+# To compare different values you can you these
+# result = max(a, b, c) will give the maximum as the output
+# result = min(a, b, c) will give the mininun as the output
+# 
+# Otherwise if you need more arithmetics tools you can use the import math 
+# 
+# Then you can use many features such as math.pi, giving exactly pi
+# You can have the exponential, the square root, the power, etc
+# The function ceil round the numbers to the upper rounded one
+# The contrary is floor, which will round the the lower one
+
+
