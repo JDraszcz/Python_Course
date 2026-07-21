@@ -79,3 +79,19 @@ fourth_kind_of_variable = True           # This is a boolean
 #                           Inputs                              #
 #---------------------------------------------------------------#
 
+# When you want to give the choice to the user, you have to create an imput
+# Here's a simple way to ask the user's name
+# user_name = input("What's your name ?")
+# This give an input to the user to write down his name
+# The value of the variable will now be the user's name
+# print(f"Nice to meet you {user_name}")
+# That's how you can easily make a welcoming message
+
+# However inputs basically returns string
+# If you want to change the data type you have to specify it
+# For example, if you want the user's age
+# user_age = int(input("How old are you ?"))
+# And then you can just use it or do math with it ! 
+# print(f"You're {user_age} years old !")
+# user_double = user_age * 2 
+# print(f"The double of your age is {user_double}")
