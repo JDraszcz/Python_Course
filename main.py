@@ -128,3 +128,172 @@ fourth_kind_of_variable = True           # This is a boolean
 # The contrary is floor, which will round the the lower one
 
 
+#---------------------------------------------------------------#
+#                           If Statements                       #
+#---------------------------------------------------------------#
+
+# If you want something to happen if the requirement is met you can use 
+# An if statement
+# If you want to print "Well Play if user's score is greater than 80"
+# user_score = float(input("Type your score : "))
+
+# if user_score > 80: 
+#    print("Well Play !")
+# !!! Indentation is VERY important !!!
+
+# If you now want to print another message if the requirement is not met
+
+# if user_score > 80: 
+#     print("Well Play !")
+# else : 
+#     print(f"Nice try but your score is only {user_score} points.")
+
+# If you need to check other statements you can add an elif statement like this
+
+# if user_score > 80 :
+#     print("Well Play !")
+# elif user_score >= 60 :
+#     print("Nice One !")
+# else :
+#     print(f"Nice try but you only got {user_score} points.")
+
+# If you want to check if a variable is equal to a value use ==
+
+#---------------------------------------------------------------#
+#                      Logical Operators                        #
+#---------------------------------------------------------------#
+
+# 3 Basics Logical Operators
+
+# or : 1 of the conditions must be true
+
+# and : All of the requirements has to be met
+
+# not : The condition needs to be inverted 
+
+# No need for an example except for the NOT
+# Let's do a age verification 
+
+# user_age = int(input("Insert your Age : "))
+
+# if user_age > 0 and user_age <= 110 :
+#     if user_age < 18:
+#         is_minor = True
+#     else :
+#         is_minor = False
+    
+# else :
+#    print(f"You can't have {user_age} years old")
+
+# if not is_minor :
+#     print("You're major, at least 18 years old")
+# else :
+#     print("You're still a minor")
+
+# The Code is not perfect but not is_minor is going to check if it is set to False 
+
+#---------------------------------------------------------------#
+#                   Conditionnal Expressions                    #
+#---------------------------------------------------------------#
+
+
+# You can have an if / else statement directly in one line in a print for example
+# A little example with the age once again
+
+# age = int(input("May enter your age : "))
+
+# print("You're major" if age >= 18 else "You're a minor")
+
+#---------------------------------------------------------------#
+#                       String Methods                          #
+#---------------------------------------------------------------#
+
+# Here's a few list of the most important things you can do on a string
+# let's call our variable string and it's data type string
+
+# 1. len(string)                       => Give the length of the string
+# 2. string.find("x")                  => Looking for the first x in the String
+# 3. string.rfind("x")                 => Looking for the last iterance
+# 4. string.capitalize()               => Capitalize the first item
+# 5. string.upper()                    => Put Uppercase to all letters
+# 6. string.lower()                    => Put lowercase to all letters
+# 7. string.isdigit()                  => Boolean true if all elements are digits
+# 8. string.isalpha()                  => Boolean true if all elements are alphabetical
+# 9. string.count("x")                 => Count the number of x in the string
+# 10. string.replace("x", "z")         => Replace all x with z
+
+# If you need more just type print(help(str))
+
+#---------------------------------------------------------------#
+#                    String Indexation                          #
+#---------------------------------------------------------------#
+
+# Indexing means accessing a specific part
+# You need to use squared brackets
+# Here's how to do it and an example
+# [beginning of the index : end : steps]
+# ! The end index is excluded ! 
+# Let's explain it with an example
+# Let's write a string then print the result of an indexation
+# string = "My super string so fun to use !"
+# indexation = string[3 : 20 : 3]
+
+# print(indexation)
+# In this example we are taking all characters from super to the u of fun
+# and we are doing 3 steps by 3 steps so the first one is s
+# then e, s, i, space, space and then we are out of reach
+# The result will be sesi 
+# You can also take the last index elements by using negative numbers
+# In our example, string[-1] will print the !
+
+#---------------------------------------------------------------#
+#                       Format Specifiers                       #
+#---------------------------------------------------------------#
+
+# Quite hard to explain, just remember that you can layout your values
+# To do this, just add the so-called flags when asking a varible
+# print(f"Take a look at my variable {variable:flags}")
+# There are a tons of flags but some can be very useful for app banks for example
+# Here's an example
+
+# bank_account = 2548.32
+# next_withdrawal = -658.24
+# future_ammount = bank_account + next_withdrawal
+
+# print(f"Your bank account has for now an ammount of ${bank_account:+,.1f}")
+# print(f"However a withdrawal of {next_withdrawal:+,.1f} is now scheduled")
+# print(f"Your future ammount will be : ${future_ammount:<10.1f}")
+# You can now see on the first print that we print a positive sign if the value is
+# We also add a comma automatically
+# Then we ask for 1 decimal
+# It's the same on the second except that a negative value a - will be printed
+# Last the third print lets 10 characters maximums, put the value to the left with <
+# and decimal
+
+#---------------------------------------------------------------#
+#                        While loops                            #
+#---------------------------------------------------------------#   
+
+# It's basically a loop that repeat an action while a condition is true
+
+# Easy example
+
+# password = "1234"
+# password_check = input("May enter the password : ")
+
+# while password_check != password :
+#     print("Incorrect password")
+#     password_check = input("May enter the password")
+# else :
+#     print("Welcome admin !")
+
+# While the password typed is different you will have to type it again and again
+
+# You can also create this kind of while loops
+
+while True : 
+    rate = float(input("Enter a value : "))
+    if rate < 0:
+        print("Impossible")
+    else:
+        break
