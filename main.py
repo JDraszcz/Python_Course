@@ -349,3 +349,44 @@ fourth_kind_of_variable = True           # This is a boolean
 #     print(i, end=" ")
 
 # In this case all the value are printed on the same line with a space
+
+#---------------------------------------------------------------#
+#                           Lists                               #
+#---------------------------------------------------------------#
+
+
+# In python there are 3 different kinds of collection :
+# You can acces the datas as we did in the previous parts 
+
+# 1. Lists with [] : ordered and changeable
+# 2. Set with {} : unordered and immutable (can't be modified)
+# 3. Tuple with () : odered and unchangeable
+
+# Different examples
+# Lists
+# countries = ["France", "Great Britain", "Russia", "Belgium"]
+# print(countries[0]) 
+# print(countries[0 : 2]) will print the first 2 countries
+# As the indexation starts at 0 France is printed, 1 is Great Britain, etc
+# If you need complementary abilities just print dir(countries) or help(countries)
+# You can also look for an element in the list creating a boolean 
+# print("Banana" in countries) 
+# Since banana is not is the list it will be False
+# If you want to modify a value : 
+# countries[0] = "Canada" 
+# In this case France will be replaced by Canada
+# If you want to add an element to the end of the list use the append method
+# If you want it to be to a specific index here's an example
+# countries.insert(2, "Mexico")
+# If you had to find the index of the element just type index and the value 
+# To delete the list just type countries.clear()
+
+# Sets
+# Let's create the same list as a set
+# countries = {"France", "Great Britain", "Russia", "Belgium"}
+# Since sets are unordered you can't find an element using a ID
+
+# Tuples
+# To make it easy it is a ordered list that you can't change
+# You can have many iterances of one item bu when you create it 
+# you can't change the tuple anymore
