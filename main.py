@@ -291,9 +291,61 @@ fourth_kind_of_variable = True           # This is a boolean
 
 # You can also create this kind of while loops
 
-while True : 
-    rate = float(input("Enter a value : "))
-    if rate < 0:
-        print("Impossible")
-    else:
-        break
+# while True : 
+#     rate = float(input("Enter a value : "))
+#     if rate < 0:
+#         print("Impossible")
+#     else:
+#         break
+
+# In this case, while rate in inferior to 0 you will have to enter a new value
+# Those loops needs a break if you don´t want them to run for eternity
+
+
+#---------------------------------------------------------------#   
+#                           For Loops                           #
+#---------------------------------------------------------------#   
+
+# Once again this loop will execute a block of code 
+# Since the second number is exclusive 
+# Let's try to create a counter from 1 to 10
+
+# for i in range(10, 0, -1):
+#     print(f"Number : {i}")
+
+
+# Like the String Indexation you can add a step 
+# In this case we've created a countdown from 10 to 1
+# In our case you can also use reverse(range(1, 11))
+
+# You can also use the number of elements in a string
+
+# my_string = "Hi everyone !"
+
+# for i in my_string:
+#     print(i)
+
+# In this case all the characters had been seperated
+
+# 2 important elements in loops : continue and break 
+# Continue is mostly use to skip iterations
+# If we wanted to modify our last example with continue
+
+# for i in my_string :
+#     if i == " ":
+#         continue
+#     else :
+#         print(i)
+
+# In this case all spaces will be removed
+
+# Break will exit the loop
+# In the code above only "Hi" will be printed
+
+# If you need to print everything in one line you can do 
+# like the example below
+
+# for i in range(1, 11) :
+#     print(i, end=" ")
+
+# In this case all the value are printed on the same line with a space
