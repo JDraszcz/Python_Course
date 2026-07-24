@@ -390,3 +390,95 @@ fourth_kind_of_variable = True           # This is a boolean
 # To make it easy it is a ordered list that you can't change
 # You can have many iterances of one item bu when you create it 
 # you can't change the tuple anymore
+
+
+#---------------------------------------------------------------#
+#                       2D Collection                           #
+#---------------------------------------------------------------#
+
+# 2D collection is a list containing lists like this example below
+# test = [[0, 2], [3, 8]]
+# test.append([3, 6])
+# print(test)
+
+# Those collections can do everything the same than 1D collections
+# If you want to access a specific item you can do this
+# test[1][0] = 5
+# This line replaces the 3 of the second element by 5
+
+# If you want to print every element 1 by 1 you will need a nested loop
+
+# for i in test :
+#     for x in i:
+#         print(x)
+
+# You can also use tuples and sets and put different kinds 
+# Example with a numpad
+
+# num_pad = [["1", "2", "3"], ["4", "5", "6"], ["*", "0", "#"]]
+
+# for rows in num_pad:
+#     for i in rows:
+#         print(i, end="  ")
+#     print()
+
+#---------------------------------------------------------------#
+#                       Dictionnaries                           #
+#---------------------------------------------------------------#
+
+# It is a collection of key and values registered like this
+# {key:value}
+# As always you can print dir() or help() for all the commands 
+# Here's an example
+
+capitals = {"France" : "Paris" ,
+            "Canada" : "Ottawa" ,
+            "Australia" : "Canberra"}
+
+# Above we have declared 3 different cities that we can print like this
+# print(capitals.get("France"))
+# You can use if / else to check if an item is in the dictionnary 
+# if capitals.get("France") :
+#     print(f"The capital city is {capitals.get("France")}")
+# else : 
+#     print("We don't have this capital city ")
+
+# If you want to add or modify an item you can use the update function
+# capitals.update({"Bulgaria" : "Sofia"})
+# If you want to suppress an item
+# capitals.pop("Bulgaria")
+# You can also delete the latest item by using
+# capitals.popitem()
+
+# Since Sofia is referenced by Bulgaria, removing Bulgaria will also remove Sofia
+
+# If you only need the keys of your dictionnary
+# print(capitals.keys())
+# On the contrary if you only want the values
+# print(capitals.values())
+
+#---------------------------------------------------------------#
+#                         Random                                #
+#---------------------------------------------------------------#
+
+# If you need to create random numbers you can 
+import random
+# And if you need help just print it
+# To explain this we are goign to create a guess the number from 
+# 1 to 10
+
+# number = random.randint(1, 10)
+
+# while True : 
+#     guess = int(input("Try to guess the number (1 to 10 ) : "))
+#     if guess == number :
+#         print("You got it right")
+#         break
+#     else : 
+#         print("Try again")
+
+# If you want a random float just use the .random()
+
+trying = ["test1", "test2"]
+
+print(random.choice(trying))
