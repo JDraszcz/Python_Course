@@ -42,35 +42,35 @@ fourth_kind_of_variable = True           # This is a boolean
 
 # Typecasting is the process of converting a variable type to another
 
-# PN : Maybe what we use while doing an input ? 
+# PN : Maybe what we use while doing an input ?
 
 # There are 4 types, representing the types of variables
 # str() int() float() and bool()
 
-# How does it work ? 
+# How does it work ?
 # Using the variable "second_kind_of_variable" we'll transform an integer
 # To a String and the output will be the type
 
 # First let's check the type of the function at the beginning
 
-# print(type(second_kind_of_variable)) 
-# Prints int as intended 
+# print(type(second_kind_of_variable))
+# Prints int as intended
 
 # Let's now modify the type to a string
 #changing_type = str(second_kind_of_variable)
 
 # Then check that the output is indeed a string
-# print(type(changing_type)) 
+# print(type(changing_type))
 # Prints str for string
 
-# Notice that if your changing a floating value for an integer 
+# Notice that if your changing a floating value for an integer
 # Decimals will be suppressed
-# For exemple 3.25 will become 3 
-# On the contrary if an integer becomes a floating value 
+# For exemple 3.25 will become 3
+# On the contrary if an integer becomes a floating value
 # A decimal will appear
 # If the integer is 13 it will be 13.0
 
- 
+
 
 # For the boolean, if the value is null it will print False
 # Otherwise it will be true
@@ -91,9 +91,9 @@ fourth_kind_of_variable = True           # This is a boolean
 # If you want to change the data type you have to specify it
 # For example, if you want the user's age
 # user_age = int(input("How old are you ?"))
-# And then you can just use it or do math with it ! 
+# And then you can just use it or do math with it !
 # print(f"You're {user_age} years old !")
-# user_double = user_age * 2 
+# user_double = user_age * 2
 # print(f"The double of your age is {user_double}")
 
 
@@ -109,19 +109,19 @@ fourth_kind_of_variable = True           # This is a boolean
 # number *= 2   This one doubles the variable
 # number **= 2  This one squares the number
 # number /= 2   This one divides to variable by 2
-# number %= 1   Modulo gives the remainder when one number is divided by another. 
+# number %= 1   Modulo gives the remainder when one number is divided by another.
 
 # Some other basics, keeping our variable number but using another one called result
 # result = round(number, 1)   Will round number and the output will be 1 and 1 decimal
-# result = abs(number)     Always give the positive one 
-# result = pow(number, 3)  This one will power number by 3 
+# result = abs(number)     Always give the positive one
+# result = pow(number, 3)  This one will power number by 3
 
 # To compare different values you can you these
 # result = max(a, b, c) will give the maximum as the output
 # result = min(a, b, c) will give the mininun as the output
-# 
-# Otherwise if you need more arithmetics tools you can use the import math 
-# 
+#
+# Otherwise if you need more arithmetics tools you can use the import math
+#
 # Then you can use many features such as math.pi, giving exactly pi
 # You can have the exponential, the square root, the power, etc
 # The function ceil round the numbers to the upper rounded one
@@ -132,20 +132,20 @@ fourth_kind_of_variable = True           # This is a boolean
 #                           If Statements                       #
 #---------------------------------------------------------------#
 
-# If you want something to happen if the requirement is met you can use 
+# If you want something to happen if the requirement is met you can use
 # An if statement
 # If you want to print "Well Play if user's score is greater than 80"
 # user_score = float(input("Type your score : "))
 
-# if user_score > 80: 
+# if user_score > 80:
 #    print("Well Play !")
 # !!! Indentation is VERY important !!!
 
 # If you now want to print another message if the requirement is not met
 
-# if user_score > 80: 
+# if user_score > 80:
 #     print("Well Play !")
-# else : 
+# else :
 #     print(f"Nice try but your score is only {user_score} points.")
 
 # If you need to check other statements you can add an elif statement like this
@@ -169,10 +169,10 @@ fourth_kind_of_variable = True           # This is a boolean
 
 # and : All of the requirements has to be met
 
-# not : The condition needs to be inverted 
+# not : The condition needs to be inverted
 
 # No need for an example except for the NOT
-# Let's do a age verification 
+# Let's do a age verification
 
 # user_age = int(input("Insert your Age : "))
 
@@ -232,7 +232,7 @@ fourth_kind_of_variable = True           # This is a boolean
 # You need to use squared brackets
 # Here's how to do it and an example
 # [beginning of the index : end : steps]
-# ! The end index is excluded ! 
+# ! The end index is excluded !
 # Let's explain it with an example
 # Let's write a string then print the result of an indexation
 # string = "My super string so fun to use !"
@@ -242,7 +242,7 @@ fourth_kind_of_variable = True           # This is a boolean
 # In this example we are taking all characters from super to the u of fun
 # and we are doing 3 steps by 3 steps so the first one is s
 # then e, s, i, space, space and then we are out of reach
-# The result will be sesi 
+# The result will be sesi
 # You can also take the last index elements by using negative numbers
 # In our example, string[-1] will print the !
 
@@ -272,7 +272,7 @@ fourth_kind_of_variable = True           # This is a boolean
 
 #---------------------------------------------------------------#
 #                        While loops                            #
-#---------------------------------------------------------------#   
+#---------------------------------------------------------------#
 
 # It's basically a loop that repeat an action while a condition is true
 
@@ -302,19 +302,19 @@ fourth_kind_of_variable = True           # This is a boolean
 # Those loops needs a break if you don´t want them to run for eternity
 
 
-#---------------------------------------------------------------#   
+#---------------------------------------------------------------#
 #                           For Loops                           #
-#---------------------------------------------------------------#   
+#---------------------------------------------------------------#
 
-# Once again this loop will execute a block of code 
-# Since the second number is exclusive 
+# Once again this loop will execute a block of code
+# Since the second number is exclusive
 # Let's try to create a counter from 1 to 10
 
 # for i in range(10, 0, -1):
 #     print(f"Number : {i}")
 
 
-# Like the String Indexation you can add a step 
+# Like the String Indexation you can add a step
 # In this case we've created a countdown from 10 to 1
 # In our case you can also use reverse(range(1, 11))
 
@@ -327,7 +327,7 @@ fourth_kind_of_variable = True           # This is a boolean
 
 # In this case all the characters had been seperated
 
-# 2 important elements in loops : continue and break 
+# 2 important elements in loops : continue and break
 # Continue is mostly use to skip iterations
 # If we wanted to modify our last example with continue
 
@@ -342,7 +342,7 @@ fourth_kind_of_variable = True           # This is a boolean
 # Break will exit the loop
 # In the code above only "Hi" will be printed
 
-# If you need to print everything in one line you can do 
+# If you need to print everything in one line you can do
 # like the example below
 
 # for i in range(1, 11) :
@@ -356,7 +356,7 @@ fourth_kind_of_variable = True           # This is a boolean
 
 
 # In python there are 3 different kinds of collection :
-# You can acces the datas as we did in the previous parts 
+# You can acces the datas as we did in the previous parts
 
 # 1. Lists with [] : ordered and changeable
 # 2. Set with {} : unordered and immutable (can't be modified)
@@ -365,20 +365,20 @@ fourth_kind_of_variable = True           # This is a boolean
 # Different examples
 # Lists
 # countries = ["France", "Great Britain", "Russia", "Belgium"]
-# print(countries[0]) 
+# print(countries[0])
 # print(countries[0 : 2]) will print the first 2 countries
 # As the indexation starts at 0 France is printed, 1 is Great Britain, etc
 # If you need complementary abilities just print dir(countries) or help(countries)
-# You can also look for an element in the list creating a boolean 
-# print("Banana" in countries) 
+# You can also look for an element in the list creating a boolean
+# print("Banana" in countries)
 # Since banana is not is the list it will be False
-# If you want to modify a value : 
-# countries[0] = "Canada" 
+# If you want to modify a value :
+# countries[0] = "Canada"
 # In this case France will be replaced by Canada
 # If you want to add an element to the end of the list use the append method
 # If you want it to be to a specific index here's an example
 # countries.insert(2, "Mexico")
-# If you had to find the index of the element just type index and the value 
+# If you had to find the index of the element just type index and the value
 # To delete the list just type countries.clear()
 
 # Sets
@@ -388,7 +388,7 @@ fourth_kind_of_variable = True           # This is a boolean
 
 # Tuples
 # To make it easy it is a ordered list that you can't change
-# You can have many iterances of one item bu when you create it 
+# You can have many iterances of one item bu when you create it
 # you can't change the tuple anymore
 
 
@@ -412,7 +412,7 @@ fourth_kind_of_variable = True           # This is a boolean
 #     for x in i:
 #         print(x)
 
-# You can also use tuples and sets and put different kinds 
+# You can also use tuples and sets and put different kinds
 # Example with a numpad
 
 # num_pad = [["1", "2", "3"], ["4", "5", "6"], ["*", "0", "#"]]
@@ -428,7 +428,7 @@ fourth_kind_of_variable = True           # This is a boolean
 
 # It is a collection of key and values registered like this
 # {key:value}
-# As always you can print dir() or help() for all the commands 
+# As always you can print dir() or help() for all the commands
 # Here's an example
 
 capitals = {"France" : "Paris" ,
@@ -437,10 +437,10 @@ capitals = {"France" : "Paris" ,
 
 # Above we have declared 3 different cities that we can print like this
 # print(capitals.get("France"))
-# You can use if / else to check if an item is in the dictionnary 
+# You can use if / else to check if an item is in the dictionnary
 # if capitals.get("France") :
 #     print(f"The capital city is {capitals.get("France")}")
-# else : 
+# else :
 #     print("We don't have this capital city ")
 
 # If you want to add or modify an item you can use the update function
@@ -461,24 +461,112 @@ capitals = {"France" : "Paris" ,
 #                         Random                                #
 #---------------------------------------------------------------#
 
-# If you need to create random numbers you can 
+# If you need to create random numbers you can
 import random
 # And if you need help just print it
-# To explain this we are goign to create a guess the number from 
+# To explain this we are goign to create a guess the number from
 # 1 to 10
 
 # number = random.randint(1, 10)
 
-# while True : 
+# while True :
 #     guess = int(input("Try to guess the number (1 to 10 ) : "))
 #     if guess == number :
 #         print("You got it right")
 #         break
-#     else : 
+#     else :
 #         print("Try again")
 
 # If you want a random float just use the .random()
 
-trying = ["test1", "test2"]
+# trying = ["test1", "test2"]
 
-print(random.choice(trying))
+# print(random.choice(trying))
+
+#---------------------------------------------------------------#
+#                         Functions                             #
+#---------------------------------------------------------------#
+
+# Functions can be used any time you need to reitarate a set of instructions
+# Here's a litte example of how to define a function and call it
+# We are going to create a function that will choose a random number and print it 
+# 3 times
+
+# def example():
+#     for i in range(3):
+#         number = random.randint(1, 20)
+#         print(number)
+
+# example()
+
+# In this example it can seem useless but we can use a function a lot of time and add
+# some arguments to customize a message
+# if you want to create a welcoming message
+
+# def welcome(name):
+#     print(f"Welcome {name} !")
+
+# welcome("Joe")
+
+# When we use the function we set the value name to Joe, creating the message
+# PS : You can send more than one argument for a function
+
+# You can use a return statement to stop a function and return a value
+
+# def add(x, y):
+#     z = x + y
+#     return z
+
+# print(add(1, 4))
+
+# You can also create default arguments for the elements that are supposed to be
+# often the same
+
+# def price(initial_price, discount=0):
+#     return initial_price * (1-discount)
+
+# print(price(200))
+# print(price(200, 0.3))
+
+# The first example is still 200 but the other one prints 140
+
+#---------------------------------------------------------------#
+#                       Keywords arguments                      #
+#---------------------------------------------------------------#
+
+# In order to increase readibility you can use keywords
+
+# def name(first, last):
+#     print(f"Hello {first} {last}")
+
+# name(last="Doe", first="John")
+
+# other examples exists such as the end keyword or sep to separate
+
+#---------------------------------------------------------------#
+#                      *args and *kwargs                        #
+#---------------------------------------------------------------#
+
+# Don't know how to explain but here's an example of *args
+
+# def add(*values):
+#     total = 0
+#     for arg in values:
+#         total += arg
+#     return total
+
+# print(add(1,4,5,6))
+
+# This example is easy to explain, you can add as many arguments as you want
+
+# ** allows you to create the same thing with keywords, creating a dictionnary
+
+def indentity_card(**infos):
+    print(type(infos))
+    for key, value in infos.items():
+        print(f"{key} : {value}")
+
+
+indentity_card(name="John",
+               surname="Doe",
+               age = 23,)
