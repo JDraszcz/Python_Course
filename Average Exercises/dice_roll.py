@@ -13,22 +13,26 @@
 import random
 
 values = {
-           1 : "1",
-           2 : "2",
-           3 : "3",
-           4 : "4",
-           5 : "5",
-           6 : "6"
+           1 : "⚀",
+           2 : "⚁",
+           3 : "⚂",
+           4 : "⚃",
+           5 : "⚄",
+           6 : "⚅"
          }
 
 
 dice = []
 total = 0
 ask = int(input("How many dices do you want ?"))
-
-print(ask)
-
-for die in range(ask) :
-    dice.append(random.randint(1, 6))
-
+if ask > 0: 
+    for die in range(ask) :
+        new = random.randint(1, 6)
+        dice.append(new)
+        total += new
 print(dice)
+print("--------------------------------")
+for die in dice : 
+    print(values.get(die))
+        
+
