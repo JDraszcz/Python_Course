@@ -561,12 +561,14 @@ import random
 
 # ** allows you to create the same thing with keywords, creating a dictionnary
 
-def indentity_card(**infos):
-    print(type(infos))
-    for key, value in infos.items():
-        print(f"{key} : {value}")
+# def indentity_card(**infos):
+#     print(type(infos))
+#     for key, value in infos.items():
+#         print(f"{key} : {value}")
 
 
-indentity_card(name="John",
-               surname="Doe",
-               age = 23,)
+# indentity_card(name="John",
+#                surname="Doe",
+#                age = 23,)
+
+# The function is displaying all the informations
