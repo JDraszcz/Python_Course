@@ -572,3 +572,54 @@ import random
 #                age = 23,)
 
 # The function is displaying all the informations
+
+#---------------------------------------------------------------#
+#                          Iterables                            #
+#---------------------------------------------------------------#
+
+# Iterables are simply the way of going through a list of elements
+# You can iterate everything
+# If you want to iterate through a dictionnary pay attention to what 
+# you want to print : my_dictionnary will print the key,
+# my_dictionnary.values() the values and my_dictionnary.items()
+# will print everything
+
+#---------------------------------------------------------------#
+#                   Membership operators                        #
+#---------------------------------------------------------------#
+
+# These are used to check of something is in or not in
+# Example with a guessing a letter from a word
+
+# secret_word = "Manganese"
+
+# letter = input("Please enter a word from the secret word :")
+
+# if letter in secret_word :
+#     print(f"Congratulations you found the letter {letter} from the word")
+# else :
+#     print(f"Nice one but the letter {letter} is not part of the word")
+
+#---------------------------------------------------------------#
+#                       List Comprehension                      #
+#---------------------------------------------------------------#
+
+# This helps compacting the code
+# We are going to print the same thing the normal way
+# Then using list comprehension
+
+# 1st method
+# doubles = []
+# for x in range(1,11):
+#     doubles.append(x*2)
+# print(doubles)
+
+# This is the basic way, let's compact the code 
+
+# doubles = [x *2 for x in range(1,11)]
+# print(doubles)
+
+numbers = [1, 4, 12, -8, 6, -87, -9, 4]
+positive_numbers = [num for num in numbers if num > 0]
+
+print(positive_numbers)
