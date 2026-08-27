@@ -619,7 +619,138 @@ import random
 # doubles = [x *2 for x in range(1,11)]
 # print(doubles)
 
-numbers = [1, 4, 12, -8, 6, -87, -9, 4]
-positive_numbers = [num for num in numbers if num > 0]
+# Here's an example with a condition
 
-print(positive_numbers)
+# numbers = [1, 4, 12, -8, 6, -87, -9, 4]
+# positive_numbers = [num for num in numbers if num > 0]
+
+# print(positive_numbers)
+
+#---------------------------------------------------------------#
+#                   Match-Case Statements                       #
+#---------------------------------------------------------------#
+
+# Imagine you want to create a message printing the corresponding
+# day. Here's the easiest way
+
+# choice = input("Please choose a day of the week (1-7) : ")
+
+# try: 
+#     choice = int(choice)
+# except ValueError:
+#     print("Please choose a valid value.")
+
+
+
+# if choice == 1: 
+#     print(f"The day number {choice} is monday")
+# elif choice == 2:
+#     print(f"The day number {choice} is Tuesday")
+# elif choice == 3:
+#     print(f"The day number {choice} is Wednesday")
+# elif choice == 4:
+#     print(f"The day number {choice} is Thursday")
+# elif choice == 5:
+#     print(f"The day number {choice} is Friday")
+# elif choice == 6:
+#     print(f"The day number {choice} is Saturday")
+# elif choice == 7:
+#     print(f"The day number {choice} is Sunday")
+# else:
+#     print(f"The Value {choice} is not between 1 and 7.")
+
+# And here's how to do it using match case statement
+
+# def day():
+#     user = int(input("Please choose a number of the day (1-7) : "))
+
+#     match user:
+#         case 1:
+#             print(f"The day number {user} is Monday")
+#         case 2:
+#             print(f"The day number {user} is Tuesday")
+#         case 3:
+#             print(f"The day number {user} is Wednesday")
+#         case 4:
+#             print(f"The day number {user} is Thursday")
+#         case 5:
+#             print(f"The day number {user} is Friday")
+#         case 6:
+#             print(f"The day number {user} is Saturday")
+#         case 7:
+#             print(f"The day number {user} is Sunday")
+#         case _:
+#             print(f"The value is incorrect")
+
+
+#---------------------------------------------------------------#
+#                         Modules                               #
+#---------------------------------------------------------------#
+
+# A module is a file containing code such as functions
+# One of the most used is the math module
+# Here's how to see every pre-existing modules
+
+# print(help("modules"))
+
+# Here's 3 ways to import and the differences
+
+# import math 
+# This way you will have access to everything from the module
+
+# import math as m 
+# This one gives a nickname when you have to use it
+
+# from math import pi
+# Using this you will import only the necessary and you do no longer
+# have to write math.pi just write pi
+
+# Finally you can create you own modules 
+# For example you can create a python file with every functions you need
+
+
+#---------------------------------------------------------------#
+#                       Scope Resolution                        #
+#---------------------------------------------------------------#
+
+# This is the term used to define where a variable is visible
+# LEGB rule = Local ; Enclosed ; Global ; Built-in
+
+# Local
+# Those variables are only visible where they are defined
+
+# def num(): 
+#     x = 3
+#     print(x)
+
+# print(x)
+
+# In this example, x is not visible outside of the function
+# In this way, the second print will not work
+
+# Enclosed
+
+# def func1():
+#     x = 1
+#     def func2():
+#         x = 3
+#         print(x)
+#     func2()
+
+# Enclosed variables are those in the parent function 
+# In this example x = 1
+
+# Global
+# Those are every variables outside of every function or
+# anything else
+
+# Built-in
+# Finally, built in functions are those built in modules
+
+#---------------------------------------------------------------#
+#                    If __name__ = "__main__"                   #
+#---------------------------------------------------------------#
+
+# This if statement let a code be executed only if the code is executed
+# directly by the primary file
+# Take a look at the banking program to see how this works
