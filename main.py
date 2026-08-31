@@ -754,3 +754,85 @@ import random
 # This if statement let a code be executed only if the code is executed
 # directly by the primary file
 # Take a look at the banking program to see how this works
+
+#---------------------------------------------------------------#
+#                    Object Oriented Programming                #
+#---------------------------------------------------------------#
+
+
+# An object is a bundle of attributes (= variables ) and methods (= functions)
+# Ex : We could have a car, its attributes can be the model, the fuel, how many kilometers
+# it has and if the car is actually in use
+
+# To create objects you had to create classes, which are blueprints
+# Here's how
+
+# class Car:
+    # We create a method to initialize (mandatory)
+#     def __init__(self, model, date, color, for_sale):
+        # We now precize the value of each one
+#         self.model = model
+#         self.date = date 
+#         self.color = color
+#         self.for_sale = for_sale
+    # Now we can just use the class and enter the parameters to create a car
+
+#     def start_engine(self):
+#         print(f"You are starting the engine of the {self.model}")
+
+#     def stop_engine(self):
+#         print(f"You are turning off the {self.model}")
+
+
+# We now have a complete class let's create a car
+
+# car = Car("Luce", 2026, "red", True)
+
+# The following print statement give the memory adress of the car
+# print(car)
+
+# You have to precise the attribute you want to see
+# print(car.model)
+# print(car.color)
+
+# And you can use different methods you have declared in the class
+# car.start_engine()
+# car.stop_engine()
+
+
+#---------------------------------------------------------------#
+#                       Class Variables                         #
+#---------------------------------------------------------------#
+
+# Class variables are elements defined outside of the constructor
+# They're not unique to every elements
+# It is not attributes
+# For example every car has 4 wheels
+# Instead of asking the user to note it down, we can create a class
+# variable with the number of wheels
+# Every objects created with this class will have 4 wheels
+
+
+# class Car :
+#     wheels = 4
+#     num_cars = 0
+#
+#     def __init__(self, model, year):
+#         self.model = model
+#         self.year = year
+#         Car.num_cars += 1
+
+# In this class we are incrementing the number of car every time we are creating one
+
+
+# car1 = Car("Luce", 2026)
+# car2 = Car("Sandero", 2016)
+
+# print(f"Car 1 specifications : {car1.model} ; {car1.year} ; {car1.wheels}")
+# print(f"Car 2 specifications : {car2.model} ; {car2.year} ; {car2.wheels}")
+# You can also print class variables using the name of the class 
+# print(Car.wheels)
+
+#---------------------------------------------------------------#
+#                       Inheritance                             #
+#---------------------------------------------------------------#
