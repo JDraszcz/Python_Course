@@ -836,3 +836,138 @@ import random
 #---------------------------------------------------------------#
 #                       Inheritance                             #
 #---------------------------------------------------------------#
+
+# Inheritance allows a class to inherit attributes from another class
+# We first have to create a parent class 
+
+# class Animal :
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         print(f"{self.name} is {self.age} years old")
+
+# Then we create child class, a kind of animal with the same attributes and methods
+
+# class Dog(Animal):
+#     def language(self):
+#         print("Woof")
+
+# We can now create a animal using the Animal class and a dog, which will take the same
+# attributes than a animal but it will be able to speak
+
+# animal = Animal("Scooby", 7)
+# dog = Dog("Scooby", 7)
+
+# print(f"Animal name is {animal.name}")
+# print(f"Dog name is {dog.name}")
+# print("Only the dog can speak")
+# dog.language()
+# print("Here's what happens when the animal tries to speak")
+# animal.language()
+
+#---------------------------------------------------------------#
+#               Different Kinds of Inheritance                  #
+#---------------------------------------------------------------#
+
+# Multiple inheritance
+# This one corresponds to classes who inherits from more than one class
+# Ex : A baby inherits from its mother and from its father
+# C(A, B)
+
+# Multilevel inheritance
+# Like the term tends to explain, we can have different level of inheritance
+# We can have a parent class, creating child classes creating themselves
+# Other childs
+
+# Using the example given by Bro Code
+# class Animal:
+#     def is_animal():
+#         print("This is an animal")
+
+
+# class Prey(Animal):
+#     def flee(self):
+#         print("This animal is fleeing")
+
+# class Predator(Animal):
+#     def hunt(delf):
+#         print("This animal is hunting")
+
+# class Rabbit(Prey):
+    # Since rabbit is not a predator, he can only flee
+#     pass
+
+# class Hawk(Predator):
+    # A hawk is only a Predator and can not flee
+#     pass
+
+# class Fish(Prey, Predator):
+#     pass
+
+# In this case, Rabbit and Hawk will only have one method 
+# Fish will have the 2 parent methods
+
+#---------------------------------------------------------------#
+#                   The Super() Function                        #
+#---------------------------------------------------------------#
+
+# This function is used in child classed in order to call methods 
+# from a parent class(superclass)
+
+# Let's see how this works using an example and another way to write down 
+
+# First here's without using the super() function
+
+class Circle:
+    def __init__(self, color, is_filled, radius):
+        self.color = color
+        self.is_filled = is_filled
+        self.radius = radius
+
+class Square:
+    def __init__(self, color, is_filled, width):
+        self.color = color
+        self.is_filled = is_filled
+        self.width = width
+
+
+class Triangle:
+    def __init__(self, color, is_filled, height, width):
+        self.color = color
+        self.is_filled = is_filled
+        self.height = height
+        self.width = width
+
+# This code works but it is not optimized and needs to modify 
+# Everything one by one
+# However, we can find similarities between those classes
+# Thus we can create a parent class with those similarites
+
+# Here's the corrected way
+
+class Similarities:
+    def __init__(self, color, is_filled):
+        self.color = color
+        self.is_filled = is_filled
+
+# Then we create the shapes without repeating ourselves
+
+class Circle(Similarities):
+    def __init__(self, color, is_filled, radius):
+        # We now use the super function
+        super().__init__(color, is_filled)
+        self.radius = radius
+
+class Square(Similarities):
+    def __init__(self, color, is_filled, width):
+        super().__init__(color, is_filled)
+        self.width = width
+
+class Triangle(Similarities):
+    def __init__(self, color, is_filled, height, width):
+        super().__init__(color, is_filled)
+        self.height = height
+        self.width = width
+
+circle = Circle(color = "red", is_filled = True, radius = 2.4)
+print(circle.radius)
