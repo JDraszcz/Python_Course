@@ -918,25 +918,25 @@ import random
 
 # First here's without using the super() function
 
-class Circle:
-    def __init__(self, color, is_filled, radius):
-        self.color = color
-        self.is_filled = is_filled
-        self.radius = radius
+# class Circle:
+#     def __init__(self, color, is_filled, radius):
+#         self.color = color
+#         self.is_filled = is_filled
+#         self.radius = radius
 
-class Square:
-    def __init__(self, color, is_filled, width):
-        self.color = color
-        self.is_filled = is_filled
-        self.width = width
+# class Square:
+#     def __init__(self, color, is_filled, width):
+#         self.color = color
+#         self.is_filled = is_filled
+#         self.width = width
 
 
-class Triangle:
-    def __init__(self, color, is_filled, height, width):
-        self.color = color
-        self.is_filled = is_filled
-        self.height = height
-        self.width = width
+# class Triangle:
+#     def __init__(self, color, is_filled, height, width):
+#         self.color = color
+#         self.is_filled = is_filled
+#         self.height = height
+#         self.width = width
 
 # This code works but it is not optimized and needs to modify 
 # Everything one by one
@@ -945,29 +945,41 @@ class Triangle:
 
 # Here's the corrected way
 
-class Similarities:
-    def __init__(self, color, is_filled):
-        self.color = color
-        self.is_filled = is_filled
+# class Similarities:
+#     def __init__(self, color, is_filled):
+#         self.color = color
+#         self.is_filled = is_filled
 
 # Then we create the shapes without repeating ourselves
 
-class Circle(Similarities):
-    def __init__(self, color, is_filled, radius):
-        # We now use the super function
-        super().__init__(color, is_filled)
-        self.radius = radius
+# class Circle(Similarities):
+#     def __init__(self, color, is_filled, radius):
+#         # We now use the super function
+#         super().__init__(color, is_filled)
+#         self.radius = radius
 
-class Square(Similarities):
-    def __init__(self, color, is_filled, width):
-        super().__init__(color, is_filled)
-        self.width = width
+# class Square(Similarities):
+#     def __init__(self, color, is_filled, width):
+#         super().__init__(color, is_filled)
+#         self.width = width
 
-class Triangle(Similarities):
-    def __init__(self, color, is_filled, height, width):
-        super().__init__(color, is_filled)
-        self.height = height
-        self.width = width
+# class Triangle(Similarities):
+#     def __init__(self, color, is_filled, height, width):
+#         super().__init__(color, is_filled)
+#         self.height = height
+#         self.width = width
 
-circle = Circle(color = "red", is_filled = True, radius = 2.4)
-print(circle.radius)
+#   def describe(self):
+#       print(f"It is {self.color} and {"filled" if self.is_filled else "not filled"})
+
+# circle = Circle(color = "red", is_filled = True, radius = 2.4)
+# print(circle.radius)
+
+
+# If you want to reuse a function 
+#  super().function()
+
+#---------------------------------------------------------------#
+#                       Polymorphism                            #
+#---------------------------------------------------------------#
+
