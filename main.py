@@ -991,51 +991,51 @@ import random
 
 # In order to create a shape we are using the abstract method
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Shape :
+# class Shape :
 
-    @abstractmethod
-    def area(self):
-        pass
+#     @abstractmethod
+#     def area(self):
+#         pass
 
-class Circle(Shape):
+# class Circle(Shape):
     # We are now creating a Circle to determine its area
 
-    def __init__(self, radius):
-        self.radius = radius
+#     def __init__(self, radius):
+#         self.radius = radius
 
     # Then we return the area of the Circle
 
-    def area(self):
-        return 3.14 * self.radius ** 2
+#     def area(self):
+#         return 3.14 * self.radius ** 2
 
 # A circle is a possible shape
 
-class Square(Shape):
+# class Square(Shape):
     # We are now giving attributes to the Square
 
-    def __init__(self, height):
-        self.height = height
+#     def __init__(self, height):
+#         self.height = height
 
     # We are returning the area of the square 
     
 
-    def area(self):
-        return self.height ** 2
+#     def area(self):
+#         return self.height ** 2
 
 # A Square is also a special kind of Shape
 
-class Triangle(Shape):
+# class Triangle(Shape):
     # Giving attributes 
-    def __init__(self, height, base):
-        self.height = height
-        self.base = base
+#     def __init__(self, height, base):
+#         self.height = height
+#         self.base = base
 
     # Returning the area of a Triangle
 
-    def area(self):
-        return self.base * self.height / 2
+#     def area(self):
+#         return self.base * self.height / 2
 
     
 # Once again a triangle is a specific Shape
@@ -1044,20 +1044,232 @@ class Triangle(Shape):
 # With new attributes
 # So our pizza is also a circle, which is also a shape
 # Thus, pizza has 3 different forms
-class Pizza(Circle):
+# class Pizza(Circle):
     # Let's give it attributes
-    def __init__(self, radius, topping):
+#     def __init__(self, radius, topping):
         # We are using the super() function to take parent informations
         # If we don't do that, we will not have access to the area
         # function and the result will be an error
-        super().__init__(radius)
-        self.topping = topping
+#         super().__init__(radius)
+#         self.topping = topping
 
 # Let's create a list with one of each shape we've created
 
-shapes = [Circle(3), Square(7), Triangle(2, 3), Pizza(2, "Ananas")]
+# shapes = [Circle(3), Square(7), Triangle(2, 3), Pizza(2, "Ananas")]
 
 # Then let's print the area of each shape
 
-for shape in shapes :
-    print(f"The area is {shape.area()} cm²")
+# for shape in shapes :
+#     print(f"The area is {shape.area()} cm²")
+
+
+#---------------------------------------------------------------#
+#                           Duck Typing                         #
+#---------------------------------------------------------------#
+
+# Duck Typing is another way to achieve Polymorphism
+# An object has to posses the minimum attributes to achieve polymorphism
+# "If it looks like a duck and quacks like a duck it must be a duck"
+
+# Let's see a detailled exmnple
+
+# We are going to use animals in this example
+
+# class Animal: 
+
+    # An animal is normally alive
+#    alive = True
+
+
+# Let's create other classes which will inherits from Animals 
+
+# class Dog(Animal):
+    # Let's create a speak method
+#     def speak(self):
+#         print("Wouaf")
+
+# class Cat(Animal):
+
+#     def speak(self):
+#         print("Miaou")
+
+# Let's now create a object that is not an animal
+
+# class Truck:
+    # A truck doesn't speak it horns
+#     def horn(self):
+#         print("Tut tut")
+
+
+# If we want to iterate over all those objects to get their methods 
+# An error will occur since the Truck doesn't have any similarities 
+# with an animal. However, if we change the method's name to speak()
+# We will be able to get it 
+
+# class Truck:
+
+#     def speak(self):
+#         print("Tut tut")
+
+# We now create a list with every "Animals"
+
+# animals = [Dog(), Cat(), Truck()]
+
+# Let's now iterate over every objects
+
+# for animal in animals:
+#     animal.speak()
+
+
+#---------------------------------------------------------------#
+#                       Static Methods                          #
+#---------------------------------------------------------------#
+
+# From now on we have used a lot of Instance Methods 
+# PS : Methods are functions in classes 
+
+# An Instance method looks like this
+
+# def Instance(self):
+#     print(f"My name is {self.name} ! ")
+
+# Thus, instance methods are using class attributes
+
+# On the contrary, Static Methods don't need to access class data
+
+# @staticmethod
+# def converter(kilometers):
+#     return kilometers * 0.621371
+
+
+# Let's create an example
+
+# class Employee:
+
+    # Let's initiate the class
+
+#     def __init__(self, name, position):
+#         self.name = name
+#         self.position = position
+
+    # We are now using an Instance method to get the infos
+
+#     def get_info(self):
+#         return f"Employee : {self.name} | Position : {self.position}"
+
+    # Then we are creating a static method to check if the position is valid
+
+#     def is_position_valid(position):
+        # As you can see, we are not using self since we are not accessing class data
+#         valid_positions = ["Seller", "Cashier", "Manager"]
+        # Then we check if the position entered is valid
+        # We use a boolean value
+#         return position in valid_positions
+
+
+#---------------------------------------------------------------#
+#                           Class Methods                       #
+#---------------------------------------------------------------#
+
+# Class methods are methods using attributes from the class
+# Let's explain it with an example
+
+# class Students : 
+
+#     number_of_students = 0
+
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         self.number_of_students += 1 
+
+
+    # We are now using an instance method to get the infos
+    # Since we are working on the element we just created
+    # we are entering self (refers to the elements just entered)
+#     def get_info(self):
+#         return f"Name : {self.name} | Age : {self.age}"
+
+    # But now we want to access the counter declared in the class
+    # So we are using a class method 
+
+    # First we use the class method decorator 
+#     @classmethod
+#     def counter(cls):
+        # cls means class, for the attributes declared in class
+        # The rest works like self
+#         return f"Number of students : {cls.number_of_students}"
+
+
+#---------------------------------------------------------------#
+#                           Magic Methods                       #
+#---------------------------------------------------------------#
+
+# Those methods are made with double underscore 
+# Like the one we use every time __init__
+# Let's use the example given in the video since it explains it 
+# very well
+
+# class Book :
+
+    # We first use a magic method to create our book
+
+#     def __init__(self, name, author, pages):
+#         self.name = name
+#         self.author = author
+#         self.pages = pages
+
+
+    # However, if we want to create a book and print it
+    # The output will be the memory access to the book
+    # If we want it to print the informations
+    # We need to use the __str__ magic method
+
+#     def __str__(self):
+#         return f"{self.name} by {self.author}"
+
+     # Then if you want to check if 2 books are the same 
+     # You can use the __eq__ magic method
+     # In order to verify it, we need a second argument
+     # So we are using the other argument to check it
+     # Since a book can have multiple editions
+     # And different number of pages 
+     # We are just checking for the name and the author
+
+#     def __eq__(self, other):
+#         return self.title == other.title and self.author == other.author
+
+    # Finally if you want to compare the number of pages
+    # You can use __lt__ (less than) or __gt__ (greater than)
+
+#     def __lt__(self, other):
+#         return self.pages < other.pages 
+
+    # Other operators are available, such as the addition
+
+#     def __add__(self, other):
+#         return self.pages + other.pages
+
+    # Then if you want to check if a word is in the title or the author
+    # You can use the magic method __contains__, with the self and the keyword attribute
+
+#      def __contains__(self, keyword):
+#         return keyword in self.title or keyword in self.author
+
+    # Last, if you want to get the name, the author or the num of pages
+
+#     def __getitem__(self, key):
+#         if key == "title":
+#             return self.title
+#         elif key == "author":
+#             return self.author
+#         elif key == "pages":
+#             return self.pages
+#         else : 
+#            return None
+
+
+#---------------------------------------------------------------#
+#                           @property                           #
+#---------------------------------------------------------------#
+
