@@ -983,3 +983,81 @@ import random
 #                       Polymorphism                            #
 #---------------------------------------------------------------#
 
+# Revoir cette partie avec son, pas trop compris l'utilité
+
+# Polymorphism by Inheritance
+
+# Here's an explained example
+
+# In order to create a shape we are using the abstract method
+
+from abc import ABC, abstractmethod
+
+class Shape :
+
+    @abstractmethod
+    def area(self):
+        pass
+
+class Circle(Shape):
+    # We are now creating a Circle to determine its area
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    # Then we return the area of the Circle
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+# A circle is a possible shape
+
+class Square(Shape):
+    # We are now giving attributes to the Square
+
+    def __init__(self, height):
+        self.height = height
+
+    # We are returning the area of the square 
+    
+
+    def area(self):
+        return self.height ** 2
+
+# A Square is also a special kind of Shape
+
+class Triangle(Shape):
+    # Giving attributes 
+    def __init__(self, height, base):
+        self.height = height
+        self.base = base
+
+    # Returning the area of a Triangle
+
+    def area(self):
+        return self.base * self.height / 2
+
+    
+# Once again a triangle is a specific Shape
+
+# Now Let's create a pizza, which is a form of a circle
+# With new attributes
+# So our pizza is also a circle, which is also a shape
+# Thus, pizza has 3 different forms
+class Pizza(Circle):
+    # Let's give it attributes
+    def __init__(self, radius, topping):
+        # We are using the super() function to take parent informations
+        # If we don't do that, we will not have access to the area
+        # function and the result will be an error
+        super().__init__(radius)
+        self.topping = topping
+
+# Let's create a list with one of each shape we've created
+
+shapes = [Circle(3), Square(7), Triangle(2, 3), Pizza(2, "Ananas")]
+
+# Then let's print the area of each shape
+
+for shape in shapes :
+    print(f"The area is {shape.area()} cm²")
