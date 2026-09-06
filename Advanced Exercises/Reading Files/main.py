@@ -1,7 +1,7 @@
 # Let's now read the files we have created previously
 
 # First we have to get their path 
-# file_path = "Advanced Exercises/Reading Files/list.csv"
+# file_path = "C:/Users/jordan.draszcz/OneDrive - SPIE/Documents/Cours Ecole/Python_Course/Advanced Exercises/Reading Files/list.csv"
 
 # Then we will use the with statement, and since we did use the 
 # open() method previously, we will change the letter to r for "read"
@@ -31,7 +31,11 @@
     # However to write it we did had to write it row by row
     # The concept is the same in order to read it
 #     for line in content:
-#         print(line[3])
+#         if line : 
+            # This one print row by row
+#             print(line[0])
+        # if you want to print everything
+#         print(line)
 
 
 # There's an error which indicates that's I'm out of range which starts at 0 
