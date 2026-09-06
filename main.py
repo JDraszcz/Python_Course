@@ -1411,3 +1411,52 @@ import random
 
 
 # ice_cream = get_ice_cream("Chocolate")
+
+#---------------------------------------------------------------#
+#                           Execeptions                         #
+#---------------------------------------------------------------#
+
+# Exceptions are events that are interrupting our code
+# One we have seen before is ValueError
+# An easy one is the ZeroDivisionError since we can't divide by zero
+# Another one is a TypeError, for example you can add a string and an int
+# We've seen ValueError in exercises when we were trying to pass an string into
+# An integer, the execption would occur if the input could not be transformed into a string
+
+# To prevent those event here's the structure
+
+# try :
+#   In this place we try our code
+#   For example : int(variable)
+# execpt name_of_exception:
+#   Here's what we do if we have this exception
+# finally:
+#   Do some clean up
+
+# Here's an example 
+
+# try :
+#     age = input("Enter your age :")
+#     age = int(age)
+# except ValueError:
+#     print("The value you have entered is incorrect")
+
+# You can add multiple execptions in this structure
+
+# try :
+#     number = input("Enter a number")
+#     print(1 / number)
+# except ZeroDivisionError:
+#     print("You can't divide by zero")
+# But the user can also type text
+# except ValueError:
+#     print("Please enter a number, not letters")
+
+
+# The easiest way is to catch every exception, but the user will not know what's wrong
+# try : 
+#     age = input("Please enter your age : ")
+# except Exception: 
+#      print("The value you have entered is incorrect")
+# finally: 
+#     print("This Block of code will be executed whether there's an error or not")
