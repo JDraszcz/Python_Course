@@ -1273,3 +1273,141 @@ import random
 #                           @property                           #
 #---------------------------------------------------------------#
 
+# This decorator is used to define a method as a property
+# Once again the example in the video is great so let's explain it 
+
+# First we create a class to create a rectangle
+
+# class Rectangle:
+    # let's create the initially attributes
+#     def __init__(self, height, width):
+        # But Now the attributes will be set to private using _
+#         self._height = height
+#         self._width = width
+
+    # If we try to access those datas outside of the class 
+    # You will have an annotation to prevent that you are accessing
+    # Private datas
+    
+    # Let's create properties to access to those attributes correctly
+
+#     @property
+#     def height(self):
+#        return f"{self._height:.1f} cm"
+
+#     @property
+#     def width(self):
+#         return f"{self._width:.1f} cm"
+
+
+
+    # We can also create a method to mdify the height using the decorator
+    # Set by the property decorator
+
+#     @height.setter
+    # In this case we are using the same name of method
+#     def height(self, new_height):
+        # We logically changethe name of the value we will enter
+#         if new_height < 0:
+#             print("The new height must be greater than 0")
+#         else:
+#             self._height = new_height
+
+    # Let's do the same for the width
+#     @width.setter
+#     def width(self, new_width):
+#         if new_width > 0:
+#             self._width = new_width
+#         else :
+#             print("The new Width must be greater than 0")
+
+
+
+    # Last let's create a delete method
+    # It works the same way 
+
+#     @height.deleter
+#     def height(self):
+#         del self._height
+#         print("The height has been deleted")
+
+
+#     @width.deleter
+#     def width(self):
+#         del self._width
+#         print("The width has been deleted")
+
+# And Let's create a rectangle to check everything
+
+# rectangle = Rectangle(6, 2)
+
+# Using the following print statement you will have the raw attribute
+# print(rectangle._width)
+
+# But using the method we had defined with the property decorator you
+# will have access to the attribute the right way
+
+# print(rectangle.height)
+
+# Using the setter methods we have created we can modify the height and the 
+# width just by entering the following statement
+
+# rectangle.height = 3
+# rectangle.width = 1
+
+# And let's check if it works
+# print(rectangle.width)
+
+# And now let's check if the deleter works using the del keyword
+
+# del rectangle.height
+# del rectangle.width
+
+#---------------------------------------------------------------#
+#                           Decorators                          #
+#---------------------------------------------------------------#
+
+# A decorator is a function extending the behavior of another function
+# Let's see how this works
+
+# PS : Functions used as decorators had to be declared before the primary one
+
+# You can also add sprinkles and fudge
+# So let's create those functions
+# Those functions will have to be executed with
+# Another function so we haveto pass the func argument
+
+# def get_sprinkles(func):
+    # However, we need to create an inner function to prevent
+    # The function to execute the code immediatly
+    # Moreover, this function will be executed at the same time
+    # And the request will have at least one argument
+    # So we need to authorize our request to possess all the argument
+    # needed with args and kwargs
+#     def wrapper(*args, **kwargs):
+#         print("Adding Sprinkles to your Ice Cream")
+#         func(*args, **kwargs)
+
+    # And then we had to return the result to let it be print
+#     return wrapper
+
+# Let's do the same for the fudge
+
+# def get_fudge(func):
+#     def wrapper(*args, **kwargs):
+#         print("You have added fudge to your Ice Cream")
+#         func(*args, **kwargs)
+
+#     return wrapper
+
+# Let's create a function to create an ice cream 
+# So one parameter will be needed to choose the flavor
+
+# @get_fudge
+# @get_sprinkles
+# def get_ice_cream(flavor):
+#     print(f"Here is your {flavor} Ice Cream")
+
+
+
+# ice_cream = get_ice_cream("Chocolate")
