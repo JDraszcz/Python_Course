@@ -1552,4 +1552,14 @@ import random
 
 # You can also use the join method. This methods waits for the tasks to finish before continuing
 
+# If you need to give arguments
 
+#   def walking_the_dog(name) :
+#     print(f"You walk with {name}")
+
+# do_walking_the_dog = threading.Thread(target=walking_the_dog, args=("Scooby" ,))
+# The comma is important => (*args, **kwargs)
+
+#---------------------------------------------------------------#
+#                               API                             #
+#---------------------------------------------------------------#
