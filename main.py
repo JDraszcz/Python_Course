@@ -1504,3 +1504,52 @@ import random
 #     print("The event had happened...")
 # else :
 #     print("This moment hasn't happened yet !")
+
+
+
+
+#---------------------------------------------------------------#
+#                       Multithreading                          #
+#---------------------------------------------------------------#
+
+# Multithreading allows us to do many things at once
+# First we need to import the Threading module
+# import threading
+# And to be able to see the difference let's print the time module
+# import time
+
+# Let's create a list of activities
+
+# def running():
+#     time.sleep(3)
+#     print("You finished running")
+
+
+# def eating():
+#     time.sleep(5)
+#     print("You ate well")
+
+# def sleeping():
+#     time.sleep(2)
+#     print("You took a good rest")
+
+# To execute every chores at the same moment
+# We had to put them in the same thread
+
+# Here's how to do it
+
+# do_chore1 = threading.Thread(target=running)
+
+# do_chore2 = threading.Thread(target=eating)
+
+# do_chore3 = threading.Thread(target=sleeping)
+
+# do_chore1.start()
+# do_chore2.start()
+# do_chore3.start()
+
+# As you can see by running this programm all those chores starts at the same moment
+
+# You can also use the join method. This methods waits for the tasks to finish before continuing
+
+
