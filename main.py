@@ -1460,3 +1460,47 @@ import random
 #      print("The value you have entered is incorrect")
 # finally: 
 #     print("This Block of code will be executed whether there's an error or not")
+
+#---------------------------------------------------------------#
+#                           Dates and time                      #
+#---------------------------------------------------------------#
+
+# In order to use dates and time in our python file we have to
+# Import the date and time module
+
+# import datetime
+
+# We can now use the computer's clock to print a date and the time
+
+# For now let's set a random date
+# YEAR-MONTH-DAY
+# date = datetime.date(2025, 1, 25)
+
+# To return the date of today we have to use the today method in the date method
+# Logically we are supposed to use method about date in the date method
+
+# today = datetime.date.today()
+
+
+# And it works the same with the time module
+
+# time = datetime.datetime.now()
+# print(time)
+
+# As we can read in the documentation of this library, we can use format specifiers to print the date
+# the way we want
+
+# print_date = time.strftime("%H:%M:%S, date is %Y %m %d")
+
+# print(print_date)
+
+# This module lets us create a kind of a clock
+
+# time_now = datetime.datetime.now()
+
+# targeted_time = datetime.datetime(2027, 1, 18, 12, 48, 40)
+
+# if targeted_time < time_now:
+#     print("The event had happened...")
+# else :
+#     print("This moment hasn't happened yet !")
