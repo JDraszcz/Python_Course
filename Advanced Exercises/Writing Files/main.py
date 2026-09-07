@@ -81,7 +81,7 @@ list = [["Name", "Age", "Job"],
 output_path = "Advanced Exercises/Writing Files/list.csv"
 # The rest works the same, only the written part is different like is JSON
 
-with open(output_path, "w") as file:
+with open(output_path, "w", newline="") as file:
     write = csv.writer(file)
     # The upper line creates the file but we still have to write the rows one by one
     # So let's use a for loop
