@@ -11,9 +11,19 @@
 # Here's the code from the video
 import time
 import datetime
-import pygame
 # The pygame library is used to play a sound
 
+clock = datetime.datetime(2026, 9, 7, 15, 0, 0)
+actual = datetime.datetime.now()
 
-# THIS PROGRAM CAN'T BE MADE SINCE THE PYGAME LIBRARY CAN'T BE INSTALLED
+print(clock)
 
+while actual < clock : 
+    time.sleep(1)
+    actual = datetime.datetime.now()
+    format = actual.strftime("%H %M %S")
+    print(format)
+
+# Just add the pygame method to play a sound
+
+print("Time's up !")
