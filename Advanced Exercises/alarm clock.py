@@ -11,7 +11,6 @@
 # Here's the code from the video
 import time
 import datetime
-import pygame
 # The pygame library is used to play a sound
 
 clock = datetime.datetime(2026, 9, 7, 15, 0, 0)
